@@ -34,6 +34,37 @@
   <script src="js/clipboard.js" type="text/javascript"></script>
 
   <link rel="stylesheet" href="l_files/style.css" type="text/css" media="screen" title="stylesheet" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        
+
+<!--Get Random logo-->
+<script type="text/javascript">
+  var imageURLs = [
+       "l_files/logo.png"
+     , "l_files/logo2.jpeg"
+     , "l_files/logo3.png"
+     , "l_files/logo4.jpeg"
+     , "l_files/logo5.png"
+     , "l_files/logo6.png"
+     , "l_files/logo7.png"
+     , "l_files/logo8.png"
+  ];
+  function getImageTag() {
+    var img = '<img src=\"';
+    var randomIndex = Math.floor(Math.random() * imageURLs.length);
+    img += imageURLs[randomIndex];
+    img += '\" alt=\"Some alt text\"/>';
+    return img;
+  }
+</script>
+<!-- End Of Random logo -->
+
+
 </head>
 
 <body>
@@ -41,27 +72,30 @@
     <div class="c1">
       <div class="logo">
         <span>بذار من برات</span>
-        <img id="logo" src="l_files/logo.png" alt="Logo" />
+        <script type="text/javascript">document.write(getImageTag());</script>
         <span> کنم</span>
       </div>
       <br />
       <br />
       <br />
 
+  <div style="width:650px;">
       <form>
         <input type="text" value="" title="Google Search" size="55" class="text">
         <br>
+        <br>
         <span class="button_wrapper">
           <div class="inner">
-            <input type="button" value="Google Search" rel="localize[search_button]" id="search">
+            <input class="waves-effect waves-light btn" type="button" value="Google Search" rel="localize[search_button]" id="search">
           </div>
         </span>
         <span class="button_wrapper">
           <div class="inner">
-            <input type="button" value="I'm Feeling Lucky" rel="localize[lucky_button]" id="lucky">
+            <input class="waves-effect waves-light btn" type="button" value="I'm Feeling Lucky" rel="localize[lucky_button]" id="lucky">
           </div>
         </span>
       </form>
+  </div>
       <div id="instructions">
         کسی به جای گوگل کردن از شما سوال پرسیده؟ چیزی که باید گوگل می کرد رو بنویسید، کلیک کنید و لینکی که تولید می شه رو براش بفرستین
         (:
@@ -72,7 +106,7 @@
     <input class="link copyable" readonly="readonly" id="myInput" type="text" />
     <div class="tooltip">
       <button onclick="myFunction()" onmouseout="outFunc()">
-        <span class="tooltiptext" id="myTooltip">کپی در کلیپ‌بورد</span>
+        <span class="waves-effect waves-light btn" id="myTooltip">کپی در کلیپ‌بورد</span>
         کپی کردن آدرس
       </button>
     </div>
