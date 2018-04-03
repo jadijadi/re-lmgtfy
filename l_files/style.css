@@ -62,6 +62,11 @@ input.text:focus {
 
 input#search,
 input#lucky {
+    
+}
+
+/*input#search,
+input#lucky {
     background: url("http://www.google.com/images/srpr/nav_logo13.png") repeat scroll center bottom transparent;
     border: medium none;
     color: black;
@@ -71,7 +76,7 @@ input#lucky {
     margin: 0;
     outline: 0 none;
     vertical-align: top;
-}
+}*/
 
 .button_wrapper {
     border-bottom: 1px solid #E7E7E7;
