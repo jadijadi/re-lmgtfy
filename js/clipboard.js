@@ -21,7 +21,7 @@ function openInNewTab() {
 function shortLink() {
     var param = document.getElementById("myInput").value;
 
-    var url = "http://api.yon.ir/?url=" + param;
+    var url = "http://api.yon.ir/?url=" + encodeURIComponent(param);
 
     document.getElementById("short").innerHTML = "لطفا صبر کنید ...";
 
