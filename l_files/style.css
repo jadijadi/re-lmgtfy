@@ -42,6 +42,9 @@ input {
     -moz-box-sizing: content-box;
     font-family: inherit;
 }
+input:hover{
+
+}
 
 input.text {
     background: none repeat scroll 0 0 white;
@@ -50,7 +53,7 @@ input.text {
     border-width: 1px;
     color: black;
     font: 18px arial, sans-serif bold;
-    height: 25px;
+    height: 37px;
     margin: 0;
     padding: 5px 8px 0 6px;
     vertical-align: top;
@@ -62,9 +65,9 @@ input.text:focus {
 
 input#search,
 input#lucky {
-    background: url("http://www.google.com/images/srpr/nav_logo13.png") repeat scroll center bottom transparent;
-    border: medium none;
-    color: black;
+    background: #f1f1f1;
+    border: none;
+    color: #929292;
     cursor: pointer;
     font: 15px arial, sans-serif;
     height: 30px;
@@ -72,21 +75,19 @@ input#lucky {
     outline: 0 none;
     vertical-align: top;
 }
-
-.button_wrapper {
-    border-bottom: 1px solid #E7E7E7;
-    border-right: 1px solid #E7E7E7;
-    display: inline-block;
-    margin: 3px 0 4px 4px;
+input#lucky:hover {
+  background: #f2f2f2;
+  color: black;
+}
+input#search:hover {
+  background: #f2f2f2;
+  color: black;
 }
 
-.button_wrapper .inner {
-    background: none repeat scroll 0 0 #EEEEEE;
-    border-color: #CCCCCC #999999 #999999 #CCCCCC;
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    height: 30px;
+.button_wrapper {
+
+    display: inline-block;
+    margin: 3px 0 4px 4px;
 }
 
 #fake_mouse {
