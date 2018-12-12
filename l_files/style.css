@@ -125,7 +125,7 @@ input#lucky {
 }
 
 #link {
-    display: block;
+    display: none;
     padding: 40px 0 20px 0;
     position: absolute;
     width: 100%;
