@@ -2,105 +2,108 @@
 <html>
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116680583-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116680583-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-    gtag('config', 'UA-116680583-1');
-  </script>
-  <meta charset="UTF-8">
-  <title>بذار من برات گوگل کنم</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="ImageToolbar" content="No" />
-  <meta name="MSSmartTagsPreventParsing" content="True" />
-  <meta http-equiv="Expires" content="0" />
-  <meta http-equiv="Pragma" content="No-Cache" />
-  <meta http-equiv="Cache-Control" content="No-Cache,Must-Revalidate,No-Store" />
-  <meta content="برای آدم‌هایی که از سوال هایی که با یک گوگل می شه در موردش به جواب رسید، خسته هستن" name="description" />
-  <meta content="گوگل, جادی, سرچ, google" name="keywords" />
+        gtag('js', new Date());
 
-  <link href="favicon.ico" type="image/x-icon" rel="icon" />
-  <link title="LMGTFY" href="lmgtfy.xml" type="application/opensearchdescription+xml" rel="search" />
+        gtag('config', 'UA-116680583-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>بذار من برات گوگل کنم</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="ImageToolbar" content="No"/>
+    <meta name="MSSmartTagsPreventParsing" content="True"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Pragma" content="No-Cache"/>
+    <meta http-equiv="Cache-Control" content="No-Cache,Must-Revalidate,No-Store"/>
+    <meta content="برای آدم‌هایی که از سوال هایی که با یک گوگل می شه در موردش به جواب رسید، خسته هستن"
+          name="description"/>
+    <meta content="گوگل, جادی, سرچ, google" name="keywords"/>
 
-  <script src="l_files/jquery.min.js" type="text/javascript"></script>
-  <script src="l_files/bundle.js" type="text/javascript"></script>
-  <script src="l_files/script.js" type="text/javascript"></script>
-  <script src="js/clipboard.js" type="text/javascript"></script>
+    <link href="favicon.ico" type="image/x-icon" rel="icon"/>
+    <link title="LMGTFY" href="lmgtfy.xml" type="application/opensearchdescription+xml" rel="search"/>
+    <link rel="stylesheet" href="l_files/bootstrap.min.css">
 
-  <link rel="stylesheet" href="l_files/style.css" type="text/css" media="screen" title="stylesheet" />
+    <script src="l_files/jquery.min.js" type="text/javascript"></script>
+    <script src="l_files/bundle.js" type="text/javascript"></script>
+    <script src="l_files/script.js" type="text/javascript"></script>
+    <script src="js/clipboard.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="l_files/style.css" type="text/css" media="screen" title="stylesheet"/>
 </head>
 
 <body>
-  <center>
+<section id="root">
     <div class="c1">
-      <div class="logo">
-        <span>بذار من برات</span>
-        <img id="logo" src="l_files/logo.png" alt="Logo" />
-        <span> کنم</span>
-      </div>
-      <br />
-      <br />
-      <br />
-
-      <form>
-        <input type="text" value="" title="Google Search" size="55" class="text">
-        <br>
-        <span class="button_wrapper">
+        <div class="logo">
+            <span>بذار من برات</span>
+            <img id="logo" src="l_files/logo.png" alt="Logo"/>
+            <span> کنم!</span>
+        </div>
+        <form>
+            <input type="text" value="" title="Google Search" size="55" class="text"
+                   placeholder="Search Google or typr a URL">
+            <br>
+            <span class="button_wrapper">
           <div class="inner">
             <input type="button" value="Google Search" rel="localize[search_button]" id="search">
           </div>
         </span>
-        <span class="button_wrapper">
+            <span class="button_wrapper">
           <div class="inner">
             <input type="button" value="I'm Feeling Lucky" rel="localize[lucky_button]" id="lucky">
           </div>
         </span>
-      </form>
-      <div id="instructions">
-        کسی به جای گوگل کردن از شما سوال پرسیده؟ چیزی که باید گوگل می کرد رو بنویسید، کلیک کنید و لینکی که تولید می شه رو براش بفرستین
-        (:
-      </div>
-  </center>
-  <div id="link_placeholder"></div>
-  <div id="link">
-    <input class="link copyable" readonly="readonly" id="myInput" type="text" />
-    <div class="tooltip">
-      <button onclick="myFunction()" onmouseout="outFunc()">
-        <span class="tooltiptext" id="myTooltip">کپی در کلیپ‌بورد</span>
-        کپی کردن آدرس
-      </button>
+        </form>
+        <div id="instructions">
+            کسی به جای گوگل کردن از شما سوال پرسیده؟<br> چیزی که باید گوگل می کرد رو بنویسید، کلیک کنید و لینکی که تولید
+            می شه رو براش بفرستین
+            (:
+        </div>
+        <div id="link">
+            <input class="link copyable" readonly="readonly" id="myInput" type="text"/>
+            <div class="tooltip">
+                <button onclick="myFunction()" onmouseout="outFunc()">
+                    <span class="tooltiptext" id="myTooltip">کپی در کلیپ‌بورد</span>
+                    کپی کردن آدرس
+                </button>
+            </div>
+            <button onclick="openInNewTab()">برو به این لینک</button>
+            <button id="short" onclick="shortLink()">لینک کوتاه</button>
+        </div>
+</section>
+<footer>
+    <div id="footer">
+        <a href="mailto:admin@lmgtfy.me.uk?body=Nice&amp;subject=I%20love%20LMGTFY%21" rel="localize[contact]">نویسنده
+            اصلی</a> |
+        <a href="http://jadi.net" rel="localize[advertise]">جادی.نت</a>
     </div>
-    <button onclick="openInNewTab()">برو به این لینک</button>
-    <button id="short" onclick="shortLink()">لینک کوتاه</button>
-  </div>
-  </div>
-  <div id="footer">
-    <a href="mailto:admin@lmgtfy.me.uk?body=Nice&amp;subject=I%20love%20LMGTFY%21" rel="localize[contact]">نویسنده اصلی</a> |
-    <a href="http://jadi.net" rel="localize[advertise]">جادی.نت</a>
-  </div>
-  <div id="about" class="c2">
-    <p>برای کسانی که هی ازشون سوالاتی می‌شه که با یک گوگل ساده می شه به جوابش رسید.</p>
-    <p>این پروژه هیچ ربطی به گوگل نداره.</p>
-  </div>
-  <div id="copyright"> LMGTFY, 2011 |
-    <span>GOOGLE is a trademark of Google Inc.</span>
-    <br>
-    <p>
-      برای اصلاحات و تغییرات
-      <a href="https://github.com/jadijadi/re-lmgtfy">
-        https://github.com/jadijadi/re-lmgtfy
-      </a>
-    </p>
-    <br />
-  </div>
-  <img id="fake_mouse" class="c3" src="l_files/mouse_arrow.png" alt="Mouse" />
-
+    <div id="about" class="c2">
+        <p>برای کسانی که هی ازشون سوالاتی می‌شه که با یک گوگل ساده می شه به جوابش رسید.</p>
+        <p>این پروژه هیچ ربطی به گوگل نداره.</p>
+    </div>
+    <div id="copyright">
+        <div>
+            <span>LMGTFY, 2011 |</span><span>GOOGLE is a trademark of Google Inc.</span>
+        </div>
+        <p>
+            برای اصلاحات و تغییرات
+            <a href="https://github.com/jadijadi/re-lmgtfy">
+                https://github.com/jadijadi/re-lmgtfy
+            </a>
+        </p>
+    </div>
+</footer>
+<img id="fake_mouse" class="c3" src="l_files/mouse_arrow.png" alt="Mouse"/>
 </body>
-
 </html>

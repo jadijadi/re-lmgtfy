@@ -1,58 +1,80 @@
 @font-face {
-    font-family: Sahel;
-    src: url('font/Sahel.eot');
-    src: url('Sahel.eot?#iefix') format('embedded-opentype'), url('Sahel.woff') format('woff'), url('Sahel.ttf') format('truetype');
-    font-weight: normal;
+    font-family: "Vazir-FD";
+    src: url("../font/Vazir-FD.eot");
+    /* IE9 Compat Modes */
+    src: url("../font/Vazir-FD.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url("../font/Vazir-FD.otf") format("opentype"), /* Open Type Font */
+        url("../font/Vazir-FD.svg") format("svg"), /* Legacy iOS */
+        url("../font/Vazir-FD.ttf") format("truetype"), /* Safari, Android, iOS */
+        url("../font/Vazir-FD.woff") format("woff"), /* Modern Browsers */
+        url("../font/Vazir-FD.woff2") format("woff2");
+    /* Modern Browsers */
+    font-weight: 100;
+    font-style: normal;
 }
 
-@font-face {
-    font-family: Sahel;
-    src: url('font/Sahel-Bold.eot');
-    src: url('Sahel-Bold.eot?#iefix') format('embedded-opentype'), url('Sahel-Bold.woff') format('woff'), url('Sahel-Bold.ttf') format('truetype');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: Sahel;
-    src: url('font/Sahel-Black.eot');
-    src: url('Sahel-Black.eot?#iefix') format('embedded-opentype'), url('Sahel-Black.woff') format('woff'), url('Sahel-Black.ttf') format('truetype');
-    font-weight: 900;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    font-family: "Vazir-FD";
+    direction: rtl;
     background-color: white;
     color: #333333;
-    font-family: Sahel;
+    height: 100vh;
+}
+
+#root {
+    height: 70%;
+    width: 100%;
+    display: flex;
+}
+
+.c1 {
+    text-align: center;
+    align-self: center;
+    width: 100%;
 }
 
 #logo {
-    margin-top: -1em;
     position: relative;
-    top: 2em;
+    width: 200px;
+    margin: 0 20px;
 }
 
 .logo {
     color: #444444;
-    font-size: 1.5em;
-    font-family: Sahel;
-    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.logo span {
+    align-self: center;
+}
+
+.logo img {
+    align-self: center;
 }
 
 input {
     -moz-box-sizing: content-box;
-    font-family: inherit;
+    font-family: "Vazir-FD";
 }
 
 input.text {
-    background: none repeat scroll 0 0 white;
-    border-color: #CCCCCC #999999 #999999 #CCCCCC;
-    border-style: solid;
-    border-width: 1px;
-    color: black;
-    font: 18px arial, sans-serif bold;
-    height: 25px;
+    font-size: 12px;
+    padding: 0.75rem 1.2rem;
+    background: #eee;
+    border: 0;
+    border-radius: 200px;
+    direction: ltr;
+    height: auto;
+    width: 40%;
+    color: #000;
     margin: 0;
-    padding: 5px 8px 0 6px;
     vertical-align: top;
 }
 
@@ -62,31 +84,24 @@ input.text:focus {
 
 input#search,
 input#lucky {
-    background: url("http://www.google.com/images/srpr/nav_logo13.png") repeat scroll center bottom transparent;
-    border: medium none;
+    background: #EEE;
+    border: 0;
+    box-shadow: unset;
+    padding: 0.75rem;
+    font-size: 12px;
+    height: auto;
+    border-radius: 8px;
+    -webkit-appearance: unset;
     color: black;
     cursor: pointer;
-    font: 15px arial, sans-serif;
-    height: 30px;
     margin: 0;
     outline: 0 none;
     vertical-align: top;
 }
 
 .button_wrapper {
-    border-bottom: 1px solid #E7E7E7;
-    border-right: 1px solid #E7E7E7;
     display: inline-block;
-    margin: 3px 0 4px 4px;
-}
-
-.button_wrapper .inner {
-    background: none repeat scroll 0 0 #EEEEEE;
-    border-color: #CCCCCC #999999 #999999 #CCCCCC;
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    height: 30px;
+    margin: 10px 0 0 5px;
 }
 
 #fake_mouse {
@@ -96,16 +111,13 @@ input#lucky {
 }
 
 #instructions {
-    background: url("images/instructions_bg.png") no-repeat scroll center top transparent;
     color: #999999;
-    font-size: 1.1em;
-    height: 84px;
+    font-size: 12px;
     margin-top: 40px;
-    direction: rtl;
 }
 
 #instructions div {
-    line-height: 84px;
+    line-height: 1.5;
 }
 
 #link_placeholder {
@@ -113,19 +125,33 @@ input#lucky {
 }
 
 #link {
-    display: none;
-    padding-bottom: 28px;
+    display: block;
+    padding: 40px 0 20px 0;
     position: absolute;
+    width: 100%;
+    text-align: center;
 }
 
 input.link {
-    background-color: #F4FBFF;
-    border: 1px solid #C2C9FF;
-    color: #555555;
+    font-size: 12px;
+    padding: 0.75rem 1.2rem;
+    background: #eee;
+    border: 0;
+    border-radius: 8px;
+    direction: ltr;
+    height: auto;
+    color: #000;
+    margin: 0;
+    vertical-align: top;
     cursor: pointer;
-    font-size: 1.2em;
     text-align: center;
     width: 312px;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 #footer {
@@ -140,6 +166,7 @@ input.link {
     color: #999999;
     padding: 0 1em;
     text-decoration: none;
+    font-size: 12px;
 }
 
 #footer a:hover {
@@ -150,6 +177,12 @@ input.link {
     color: #666666;
     margin-top: 0.5em;
     text-align: center;
+    font-size: 12px;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
 }
 
 #language {
@@ -168,14 +201,18 @@ input.link {
     background-color: white;
     color: #BBBBBB;
     font-size: 0.75em;
-    margin-top: 40px;
-    padding: 0.25em;
+    padding: 15px 0;
     text-align: center;
+}
+
+#copyright div {
+    direction: ltr !important;
+    font-family: Calibri;
 }
 
 #link_buttons,
 #link_message {
-    display: none;
+    display: block;
     position: absolute;
 }
 
@@ -255,15 +292,24 @@ a.link_button:hover {
 .tooltip {
     position: relative;
     display: inline-block;
-    font-family: Sahel;
+    font-family: "Vazir-FD";
 }
 
-.tooltip button {
-    font-family: Sahel;
-}
 
 button {
-    font-family: Sahel;
+    background: #EEE;
+    border: 0;
+    box-shadow: unset;
+    padding: 0.75rem;
+    font-size: 12px;
+    height: auto;
+    border-radius: 8px;
+    -webkit-appearance: unset;
+    color: black;
+    cursor: pointer;
+    margin: 0;
+    outline: 0 none;
+    vertical-align: top;
 }
 
 .tooltip .tooltiptext {
@@ -281,7 +327,7 @@ button {
     margin-left: -75px;
     opacity: 0;
     transition: opacity 0.3s;
-    font-family: Sahel;
+    font-family: "Vazir-FD";
 }
 
 .tooltip .tooltiptext::after {
@@ -298,5 +344,50 @@ button {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-    font-family: Sahel;
+    font-family: "Vazir-FD";
+}
+
+@media only screen and (max-width: 650px) {
+    #root {
+        height: 55%;
+    }
+    input.text {
+        width: 70%;
+    }
+
+    input.link {
+        display: block;
+        margin: 0 auto 10px auto;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #root {
+        height: 55%;
+    }
+    input.text {
+        width: 95%;
+    }
+
+    input.link {
+        display: block;
+        margin: 0 auto 10px auto;
+        width: 95%;
+    }
+    #copyright {
+        margin-top: 5px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    #instructions {
+        margin-top: 20px;
+    }
+
+    #about {
+        font-size: 11px;
+    }
 }
