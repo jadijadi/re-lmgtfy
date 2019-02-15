@@ -1,41 +1,31 @@
 @font-face {
-    font-family: Sahel;
-    src: url('font/Sahel.eot');
-    src: url('Sahel.eot?#iefix') format('embedded-opentype'), url('Sahel.woff') format('woff'), url('Sahel.ttf') format('truetype');
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: Sahel;
-    src: url('font/Sahel-Bold.eot');
-    src: url('Sahel-Bold.eot?#iefix') format('embedded-opentype'), url('Sahel-Bold.woff') format('woff'), url('Sahel-Bold.ttf') format('truetype');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: Sahel;
-    src: url('font/Sahel-Black.eot');
-    src: url('Sahel-Black.eot?#iefix') format('embedded-opentype'), url('Sahel-Black.woff') format('woff'), url('Sahel-Black.ttf') format('truetype');
-    font-weight: 900;
+    font-family: iransans;
+    src: url(../font/sa.ttf);
 }
 
 body {
     background-color: white;
     color: #333333;
-    font-family: Sahel;
+    font-family: iransans;
+}
+
+.c1 {
+    padding-top: 80px;
+    text-align: center;
 }
 
 #logo {
-    margin-top: -1em;
-    position: relative;
-    top: 2em;
+    max-width: 10%;
+    vertical-align: middle;
+    margin: 0 2px;
 }
 
 .logo {
     color: #444444;
-    font-size: 1.5em;
-    font-family: Sahel;
+    font-size: 20px;
+    font-family: iransans;
     font-weight: 900;
+    padding-bottom: 25px;
 }
 
 input {
@@ -44,20 +34,39 @@ input {
 }
 
 input.text {
-    background: none repeat scroll 0 0 white;
-    border-color: #CCCCCC #999999 #999999 #CCCCCC;
-    border-style: solid;
-    border-width: 1px;
-    color: black;
-    font: 18px arial, sans-serif bold;
-    height: 25px;
-    margin: 0;
-    padding: 5px 8px 0 6px;
-    vertical-align: top;
+    line-height: 40px;
+    border: 1px solid #ebeff4;
+    border-radius: 3px;
+    box-shadow: 0 4px 34px -12px rgba(69, 77, 89, 0.18);
+    height: auto;
+    padding: 0px 15px;
+    color: #666666;
+    margin-bottom: 30px;
 }
 
 input.text:focus {
     outline: medium none;
+}
+
+input[type="button"] {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.4px !important;
+    padding-top: 14px;
+    padding-right: 28px;
+    padding-bottom: 14px;
+    padding-left: 28px;
+    color: #ffffff !important;
+    box-shadow: 0 4px 40px -12px #787a7b;
+    border: unset !important;
+    height: auto !important;
+    background: #acb3bd !important;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+input[type="button"]:hover {
+    background: #222222 !important;
 }
 
 input#search,
@@ -73,20 +82,9 @@ input#lucky {
     vertical-align: top;
 }
 
-.button_wrapper {
-    border-bottom: 1px solid #E7E7E7;
-    border-right: 1px solid #E7E7E7;
+.button_wrapper {   
     display: inline-block;
     margin: 3px 0 4px 4px;
-}
-
-.button_wrapper .inner {
-    background: none repeat scroll 0 0 #EEEEEE;
-    border-color: #CCCCCC #999999 #999999 #CCCCCC;
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    height: 30px;
 }
 
 #fake_mouse {
@@ -96,12 +94,15 @@ input#lucky {
 }
 
 #instructions {
-    background: url("images/instructions_bg.png") no-repeat scroll center top transparent;
     color: #999999;
-    font-size: 1.1em;
-    height: 84px;
+    font-size: 16px;
+    min-height: 80px;
     margin-top: 40px;
     direction: rtl;
+    max-width: 31%;
+    line-height: 1.8;
+    margin: 0 auto;
+    padding-top: 45px;
 }
 
 #instructions div {
@@ -131,15 +132,23 @@ input.link {
 #footer {
     border-top: 1px solid #DDDDDD;
     color: #999999;
-    margin-top: 40px;
-    padding-top: 0.5em;
+    padding-top: 30px;
     text-align: center;
+    max-width: 35%;
+    margin: 0 auto;
+}
+
+#about p {
+    font-size: 13px;
+    margin: 0 0 4px 0;
 }
 
 #footer a {
     color: #999999;
-    padding: 0 1em;
+    padding: 0 3px;
     text-decoration: none;
+    font-size: 12px;
+    margin: 0;
 }
 
 #footer a:hover {
@@ -148,8 +157,12 @@ input.link {
 
 #about {
     color: #666666;
-    margin-top: 0.5em;
+    margin-top: 30px;
     text-align: center;
+}
+
+#copyright a {
+    color: #9e9e9e;
 }
 
 #language {
@@ -255,15 +268,15 @@ a.link_button:hover {
 .tooltip {
     position: relative;
     display: inline-block;
-    font-family: Sahel;
+    font-family: iransans;
 }
 
 .tooltip button {
-    font-family: Sahel;
+    font-family: iransans;
 }
 
 button {
-    font-family: Sahel;
+    font-family: iransans;
 }
 
 .tooltip .tooltiptext {
@@ -281,7 +294,7 @@ button {
     margin-left: -75px;
     opacity: 0;
     transition: opacity 0.3s;
-    font-family: Sahel;
+    font-family: iransans;
 }
 
 .tooltip .tooltiptext::after {
@@ -298,5 +311,5 @@ button {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-    font-family: Sahel;
+    font-family: iransans;
 }
