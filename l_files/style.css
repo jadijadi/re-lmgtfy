@@ -32,7 +32,7 @@ body {
 }
 
 .logo {
-    color: #444444;
+    color: #444;
     font-size: 1.5em;
     font-family: Sahel;
     font-weight: 900;
@@ -41,18 +41,24 @@ body {
 input {
     -moz-box-sizing: content-box;
     font-family: inherit;
+	transition: box-shadow .3s
+}
+.text:hover,
+.text:focus {
+	box-shadow: 0 0 8px #ddd;
 }
 
 input.text {
     background: none repeat scroll 0 0 white;
-    border-color: #CCCCCC #999999 #999999 #CCCCCC;
+    border-color: #CCCCCC;
     border-style: solid;
     border-width: 1px;
+	border-radius: 25px;
     color: black;
     font: 18px arial, sans-serif bold;
     height: 25px;
     margin: 0;
-    padding: 5px 8px 0 6px;
+    padding: 5px 10px 5px 10px;
     vertical-align: top;
 }
 
@@ -62,7 +68,6 @@ input.text:focus {
 
 input#search,
 input#lucky {
-    background: url("http://www.google.com/images/srpr/nav_logo13.png") repeat scroll center bottom transparent;
     border: medium none;
     color: black;
     cursor: pointer;
@@ -76,17 +81,20 @@ input#lucky {
 .button_wrapper {
     border-bottom: 1px solid #E7E7E7;
     border-right: 1px solid #E7E7E7;
+	border-radius: 4px;
     display: inline-block;
-    margin: 3px 0 4px 4px;
-}
+    margin: 20px 0 10px 10px;
+} /
 
-.button_wrapper .inner {
-    background: none repeat scroll 0 0 #EEEEEE;
-    border-color: #CCCCCC #999999 #999999 #CCCCCC;
-    border-style: solid;
-    border-width: 1px;
+input[type="button"] {
+    background-color: #4CAF50;
     display: block;
-    height: 30px;
+    height: 45px;
+	padding: 10px;
+	transition: box-shadow .3s;
+}
+input[type="button"]:hover {
+	box-shadow: 0 0 8px #bbb;
 }
 
 #fake_mouse {
@@ -119,13 +127,21 @@ input#lucky {
 }
 
 input.link {
-    background-color: #F4FBFF;
-    border: 1px solid #C2C9FF;
+    border: 1px solid #CCCCCC;
+	border-radius: 20px;
     color: #555555;
     cursor: pointer;
     font-size: 1.2em;
     text-align: center;
     width: 312px;
+	padding: 10px 5px 10px 5px;
+	margin-right: 10px;
+	transition: box-shadow .3s
+}
+input.link:hover,
+input.link:focus {
+	box-shadow: 0 0 8px #ddd;
+
 }
 
 #footer {
@@ -263,8 +279,15 @@ a.link_button:hover {
 }
 
 button {
+	border: none;
     font-family: Sahel;
+	padding: 10px;
+	transition: box-shadow .3s;
 }
+button:hover {
+	box-shadow: 0 0 8px #bbb;
+}
+
 
 .tooltip .tooltiptext {
     visibility: hidden;
@@ -299,4 +322,21 @@ button {
     visibility: visible;
     opacity: 1;
     font-family: Sahel;
+}
+
+.tooltip .tooltiptext {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover .5s infinite  alternate;
+}
+.tooltip .tooltiptext {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover .5s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
 }
