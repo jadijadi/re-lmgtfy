@@ -4,7 +4,7 @@ function myFunction() {
     document.execCommand("Copy");
 
     var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = ":کپی شد " + copyText.value;
+    tooltip.innerHTML = "لینک کپی شد "
 }
 
 function outFunc() {
