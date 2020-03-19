@@ -56,9 +56,10 @@ input.text {
 	border-radius: 25px;
     color: black;
     font: 18px arial, sans-serif bold;
-    height: 25px;
+	font-size: 18px;
+    height: 30px;
     margin: 0;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 20px 5px 20px;
     vertical-align: top;
 }
 
