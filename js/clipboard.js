@@ -21,17 +21,17 @@ function openInNewTab() {
 function shortLink() {
     var param = document.getElementById("myInput").value;
 
-    var url = "http://api.yon.ir/?url=" + param;
+    var url = "https://is.gd/create.php?format=json&url=" + param;
 
     document.getElementById("short").innerHTML = "لطفا صبر کنید ...";
 
     document.getElementById("short").disabled = true;
 
     fetch(url, {
-            method: 'POST'
+            method: 'GET'
         }).then(res => res.json())
         .then(responseJson => {
-            document.getElementById("myInput").value = "http://yon.ir/" + responseJson.output
+            document.getElementById("myInput").value = responseJson["shorturl"];
             document.getElementById("short").innerHTML = "لینک کوتاه";
             document.getElementById("short").disabled = false;
         })
