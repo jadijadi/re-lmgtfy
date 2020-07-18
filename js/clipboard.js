@@ -21,6 +21,11 @@ function openInNewTab() {
 function shortLink() {
     var param = document.getElementById("myInput").value;
 
+    // The link shortening service cannot work with links containing spaces.
+    // this 2 line code replace spaces with a character that is not used in searches.
+    param = param.split("%20").join("˺");
+    param = param.split("+").join("˺");
+
     var url = "https://is.gd/create.php?format=json&url=" + param;
 
     document.getElementById("short").innerHTML = "لطفا صبر کنید ...";

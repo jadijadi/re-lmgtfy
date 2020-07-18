@@ -268,6 +268,11 @@ $(function(){
   var linkMessage  = $("#link_message");
 
   if (searchString) {
+    // Because the link shortening service cannot work with links that contain spaces,
+    // when creating links, we replace the spaces with a character that is not used in searches.
+    // and here we replace that character with space.
+    searchString = searchString.split("˺").join(" ");
+    
     $.proMarket("120083", gentlyEncode(searchString));
     googleItForThem();
   }
