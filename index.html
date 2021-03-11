@@ -1,110 +1,147 @@
 <!DOCTYPE html>
-<html lang="fa">
-
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+<html lang="fa-IR" dir="rtl">
+  <head>
+    <title>بذار من برات گوگل کنم</title>
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0" />
+    <meta name="MSSmartTagsPreventParsing" content="True" />
+    <meta name="description" content="برای آدم‌هایی که از سوال هایی که با یک گوگل می شه در موردش به جواب رسید، خسته هستن" />
+    <meta name="keywords" content="گوگل, جادی, سرچ, google" />
+    <!-- Links -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"  />
+    <link rel="search" type="application/opensearchdescription+xml" title="LMGTFY" href="lmgtfy.xml" />
+    <link rel="stylesheet" type="text/css" title="stylesheet" media="screen" href="assets/css/main.min.css" />
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116680583-1"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-        gtag('js', new Date());
+      gtag('js', new Date());
 
-        gtag('config', 'UA-116680583-1');
+      gtag('config', 'UA-116680583-1');
     </script>
-    <meta charset="UTF-8">
-    <title>بذار من برات گوگل کنم</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="MSSmartTagsPreventParsing" content="True"/>
-    <meta content="برای آدم‌هایی که از سوال هایی که با یک گوگل می شه در موردش به جواب رسید، خسته هستن"
-          name="description"/>
-    <meta content="گوگل, جادی, سرچ, google" name="keywords"/>
-
-    <link href="assets/images/favicon.png" type="image/png" rel="icon"/>
-    <link title="LMGTFY" href="lmgtfy.xml" type="application/opensearchdescription+xml" rel="search"/>
-
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js" type="text/javascript"></script>
     <script src="assets/js/bundle.js" type="text/javascript"></script>
     <script src="assets/js/script.js" type="text/javascript"></script>
     <script src="assets/js/clipboard.js" type="text/javascript"></script>
+  </head>
 
-    <link rel="stylesheet" href="assets/css/main.css" type="text/css" media="screen" title="stylesheet"/>
-</head>
+  <body>
+    <!-- Header -->
+    <header id="instructions">
+      <p>
+        :: کسی به جای گوگل کردن از شما سوال پرسیده؟ چیزی که باید گوگل می کرد رو
+        بنویسید، کلیک کنید و لینکی که تولید می شه رو براش بفرستین (:
+      </p>
+    </header>
+    <!-- Header end -->
 
-<body>
-<div id="instructions">
-    <p>
-        :: کسی به جای گوگل کردن از شما سوال پرسیده؟ چیزی که باید گوگل می کرد رو بنویسید، کلیک کنید و لینکی که تولید می
-        شه رو براش بفرستین
-        (:
-    </p>
-</div>
-<div class="main">
-    <div class="logo">
-        <img id="logo" src="assets/images/logo.png" alt="Logo"/>
-    </div>
-    <form>
+    <!-- Main -->
+    <main class="main">
+      <div class="logo">
+        <img id="logo" src="assets/images/logo.png" alt="Logo" />
+      </div>
+      <form>
+        <!-- Input Search -->
         <div class="input-search">
-            <input type="text" value="" title="Google Search" size="55" class="text"
-                   placeholder="بذار من برات Google کنم">
-            <img src="assets/images/search.svg" alt="search">
+          <input
+            type="text"
+            value=""
+            title="Google Search"
+            size="55"
+            class="text"
+            placeholder="بذار من برات گوگل کنم"
+          />
+          <img src="assets/images/search.svg" alt="search" />
         </div>
+        <!-- Input Search end -->
+        <!-- Buttons Search -->
         <div class="buttons-search">
-            <div class="button_wrapper">
-                <div class="inner">
-                    <input type="button" value="Google Search" rel="localize[search_button]" id="search">
-                </div>
+          <div class="button_wrapper">
+            <div class="inner">
+              <input
+                id="search"
+                type="button"
+                value="Google Search"
+                rel="localize[search_button]"
+              />
             </div>
-            <div class="button_wrapper">
-                <div class="inner">
-                    <input type="button" value="I'm Feeling Lucky" rel="localize[lucky_button]" id="lucky">
-                </div>
+          </div>
+          <div class="button_wrapper">
+            <div class="inner">
+              <input
+                id="lucky"
+                type="button"
+                value="I'm Feeling Lucky"
+                rel="localize[lucky_button]"
+              />
             </div>
+          </div>
         </div>
-    </form>
-    <div id="link_placeholder"></div>
-    <div id="link">
+        <!-- Buttons Search end -->
+      </form>
+
+      <!-- Modal -->
+      <div id="link_placeholder"></div>
+      <div id="link">
         <div class="close"></div>
         <div class="box">
-            <input class="link copyable" readonly="readonly" id="myInput" type="text"/>
-            <div class="buttons">
-                <div class="tooltip">
-                    <button onclick="myFunction()">
-                        کپی کردن آدرس
-                    </button>
-                </div>
-                <button onclick="openInNewTab()">برو به این لینک</button>
-                <button id="short" onclick="shortLink()">لینک کوتاه</button>
+          <input
+            class="link copyable"
+            readonly="readonly"
+            id="myInput"
+            type="text"
+          />
+          <div class="buttons">
+            <div class="tooltip">
+              <button onclick="myFunction()">کپی کردن آدرس</button>
             </div>
+            <button onclick="openInNewTab()">برو به این لینک</button>
+            <button id="short" onclick="shortLink()">لینک کوتاه</button>
+          </div>
         </div>
-    </div>
-</div>
-<img id="fake_mouse" class="c3" src="assets/images/mouse_arrow.png" alt="Mouse"/>
+      </div>
+      <!-- Modal end -->
+    </main>
+    <!-- Main -->
 
-<!--<div id="about" class="c2">-->
-<!--    <p>برای کسانی که هی ازشون سوالاتی می‌شه که با یک گوگل ساده می شه به جوابش رسید.</p>-->
-<!--    <p>این پروژه هیچ ربطی به گوگل نداره.</p>-->
-<!--</div>-->
-<div id="footer">
-    <div class="right">
-        <a href="mailto:admin@lmgtfy.me.uk?body=Nice&amp;subject=I%20love%20LMGTFY%21" rel="localize[contact]">نویسنده
-            اصلی</a>
-        <a href="http://jadi.net" rel="localize[advertise]">جادی.نت</a>
-    </div>
+    <!-- Mouse -->
+    <img
+      id="fake_mouse"
+      class="c3"
+      src="assets/images/mouse_arrow.png"
+      alt="Mouse"
+    />
+    <!-- Mouse end -->
 
-    <div class="left">
-        <p id="copyright"> LMGTFY, 2011 | GOOGLE is a trademark of Google Inc.</p>
-        <a href="https://github.com/jadijadi/re-lmgtfy" target="_blank" class="github">
-            <img src="assets/images/github.svg" alt="">
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="right">
+        <a href="mailto:admin@lmgtfy.me.uk?body=Nice&amp;subject=I%20love%20LMGTFY%21" rel="localize[contact]">
+          نویسنده اصلی
         </a>
-    </div>
-</div>
+        <a href="http://jadi.net" rel="localize[advertise]">جادی.نت</a>
+      </div>
 
-
-</body>
-
+      <div class="left">
+        <p id="copyright">
+          LMGTFY, 2011 | GOOGLE is a trademark of Google Inc.
+        </p>
+        <a
+          href="https://github.com/jadijadi/re-lmgtfy"
+          target="_blank"
+          class="github"
+        >
+          <img src="assets/images/github.svg" alt="GitHub" />
+        </a>
+      </div>
+    </footer>
+    <!-- Footer end -->
+  </body>
 </html>

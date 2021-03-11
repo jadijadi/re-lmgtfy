@@ -1,103 +1,78 @@
-@import "_fonts.scss";
-@import "_media.scss";
+@import 'fonts';
+@import 'media';
 
 body {
-  direction: rtl;
-  display: flex;
-  font-family: Vazir, serif;
   width: auto;
   height: 100vh;
   margin: 0;
   padding: 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   overflow-y: auto;
-
-  div#instructions {
+  font-family: Vazir, serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  #instructions {
     width: 100%;
     background-color: #f7f7f7;
-
     p {
       color: #5f5f5f;
-      font-weight: 200;
+      font-weight: 300;
       padding: 0 15px;
       font-size: 14px;
     }
   }
-
-  > div.main {
+  .main {
     height: 87.5vh;
     min-height: 410px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    > div.logo {
+    .logo {
       display: flex;
       justify-content: center;
-
     }
-
-    > form {
+    form {
       display: flex;
       align-items: center;
       flex-direction: column;
       margin-bottom: 100px;
-
-      > div.input-search {
+      .input-search {
         position: relative;
+        width: 100%;
+        margin-top: 27px;
+        max-width: 582px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: {
-          top: 27px;
-        };
-        max-width: 582px;
-        width: 100%;
-
-
-        > input {
+        input {
           font-family: Vazir, serif;
           border: 1px solid #dfe1e5;
-          box-shadow: none;
           border-radius: 24px;
           height: 42px;
           width: 100%;
           max-width: 550px;
           font-size: 16px;
-          padding: {
-            right: 15px;
-            left: 15px;
-          };
-
+          padding: 0 15px;
+          outline: none;
           &:hover {
-            box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
             border-color: rgba(223, 225, 229, 0);
           }
-
           &::placeholder {
             color: #4285f4;
           }
-
-          &:focus {
-            outline: none;
-          }
-
         }
-
-        > img {
+        img {
           position: absolute;
           left: 15px;
           width: 26px;
         }
       }
-
-      > div.buttons-search {
+      .buttons-search {
         display: flex;
         flex-wrap: wrap;
         margin: 30px 0 0 0;
-
         input[type="button"] {
           background-image: -webkit-linear-gradient(top, #f8f9fa, #f8f9fa);
           background-color: #f8f9fa;
@@ -117,20 +92,18 @@ body {
         }
       }
     }
-
-    div#link {
+    #link {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      display: none;
       bottom: 0;
+      z-index: 333;
+      display: none;
+      align-items: center;
       justify-content: center;
       background-color: #000000ad;
-      z-index: 333;
-      align-items: center;
-
-      > .close {
+      .close {
         position: absolute;
         top: 0;
         left: 0;
@@ -139,24 +112,21 @@ body {
         z-index: 333;
         cursor: pointer;
       }
-
       .box {
         position: relative;
-        z-index: 3333;
-        padding: 10px 20px 10px 20px;
         width: 100%;
-        flex-direction: column;
-        align-items: center;
-        display: flex;
+        z-index: 3333;
         max-width: 400px;
+        padding: 10px 20px;
         background: #fff;
         border-radius: 5px;
-
-        > img.link {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .link {
           width: 96px;
         }
-
-        input#myInput {
+        #myInput {
           width: 100%;
           height: 30px;
           border: 1px solid #cdcdcd;
@@ -164,15 +134,15 @@ body {
           margin-top: 10px;
           cursor: default;
           background: #f3f3f3;
+          outline: none;
         }
-
-        > .buttons {
+        .buttons {
           display: flex;
-          justify-content: center;
-          align-items: center;
           flex-wrap: wrap;
-
+          align-items: center;
+          justify-content: center;
           button {
+            outline: none;
             background-color: #f8f9fa;
             border: 1px solid #f8f9fa;
             border-radius: 4px;
@@ -192,56 +162,47 @@ body {
       }
     }
   }
-
   .c3 {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
   }
-
-  div#footer {
-    background: #f2f2f2;
-    line-height: 40px;
-    border-top: 1px solid #dadce0;
+  #footer {
     width: 100%;
+    line-height: 40px;
+    background: #f2f2f2;
+    border-top: 1px solid #dadce0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-
-    > div.left {
+    justify-content: space-between;
+    .left {
       padding-left: 15px;
       display: flex;
       flex-wrap: wrap;
-
       p {
-        color: #70757a;
-        font-size: 12px;
-        direction: ltr;
         margin: 0;
+        font-size: 12px;
+        color: #70757a;
         font-family: arial, sans-serif;
       }
     }
-
-    a.github {
+    .github {
       text-decoration: none;
       display: flex;
-      margin: 0 15px 0 0;
-
-      > img {
+      margin-right: 15px;
+      img {
         width: 20px;
       }
     }
-
-    > div.right {
+    .right {
       padding-right: 10px;
-
       a {
+        font-size: 13px;
         color: #70757a;
         margin: 2px 10px 0;
-        text-decoration: none;
         white-space: nowrap;
-        font-size: 13px;
+        text-decoration: none;
       }
     }
   }
