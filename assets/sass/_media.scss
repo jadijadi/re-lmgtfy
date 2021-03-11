@@ -1,18 +1,14 @@
 @media only screen and (max-width: 557px) {
   body {
-
-    > div.main {
+    .main {
       padding: 0 15px !important;
-
-      > form {
+      form {
         margin-bottom: 50px !important;
       }
     }
-
-    div#footer {
+    #footer {
       justify-content: center !important;
-
-      div.left {
+      .left {
         justify-content: center !important;
       }
     }
