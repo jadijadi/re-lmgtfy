@@ -9,5 +9,5 @@ originally forked from re-lmgtfy but commpletely replace by another script
 ```bash
 $ git clone https://github.com/kiahamedi/re-lmgtfy.git
 $ cp re-lmgtfy/bashClient/bmbgk /usr/local/bin/
-$ bmbgk how to srite bash script?
+$ bmbgk how to write bash script?
 ```
